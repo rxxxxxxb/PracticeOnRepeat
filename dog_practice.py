@@ -1,15 +1,16 @@
 class Dog():
-    def __init__(self, name,age):
+    def __init__(self,name,age):
         self.name=name
         self.age=age
 
     def sit(self):
-        print(self.name.title() + "is now sitting")
+        print(self.name.title() + ' is now sitting down')
 
-    def roll_over(self):
-        print(self.name.title() + "rolled over ")   
+    def roll(self):
+        print(self.name.title()+ ' has rolled over')
 
-dog=Dog('lol',8)
+mydog = Dog('Alex',8)
 
-print("Name is " + dog.name.title() + " and  " + dog.name.title() + " is now sitting")
-print("Age is " + str(dog.age) + " and  " + dog.name.title() + " is now sitting")             
+mydog.sit()
+mydog.roll()
+print('Age is '+ str(mydog.age) )                
