@@ -1,13 +1,14 @@
-def user(first,last,**info):
-    profile = {}
-    profile['first name']=first
-    profile['last name']= last
+def create(first,last,**info):
+    profile={}
 
-    for key,range in info.items():
-        profile[key]=range
+    profile['first name']=first
+    profile['last name']=last
+
+    for k,range in info.items():
+        profile[k]=range
     return profile
 
-Obama = user('Barack','Obama',
-             Job='President',location='Washington DC')
+user=create ('Barack','Obama' ,location='washington',profession='president') 
 
-print(Obama)                 
+
+print(user)   

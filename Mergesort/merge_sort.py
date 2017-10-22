@@ -1,4 +1,4 @@
-class MergeSort(object):
+class MergeSort():
     def __init__(self, numbers):
         self.values = numbers
         self.count = len(numbers)
