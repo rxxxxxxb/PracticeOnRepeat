@@ -9,9 +9,23 @@ class MergeSort():
 
 
     def merge_sort(self,low,high):
+        if low<high:
+            mid = (low+high)/2
+            print(mid)
 
-
+            self.merge_sort(low,mid)
+            self.merge_sort(mid+1,high)
+            #self.merge(low,mid,high)
 
 
     def merge(self,low,mid,high):
+        b = []
+        i = low
+        j = mid + 1
+
+        while i <= mid and j<=high:
+            
+
+
+
 
