@@ -1,17 +1,20 @@
-class Dog():
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
+class Car():
+    def __init__(self,brand,year,engine):
+        self.brand = brand
+        self.year = year
+        self.engine = engine
 
+    def printBrand(self):
+        print('brand of the car ' + self.brand.title() )
 
-    def name_(self):
-        print("Name of the dog is " + self.name.title() ) 
+    def printYear(self):
+        print ('Car made in ' + str(self.year))
 
-    def age_(self):
-        print("age of the dog " + str(self.age))
+    def printEngine(self):
+        print('engine of the car ' + self.engine.title() )    
+        
+ford = Car("Ford",2010,"V8")
 
-mydog=Dog('alfred',8)
-
- 
-mydog.name_()
-mydog.age_()               
+ford.printBrand()
+ford.printYear()
+ford.printEngine()
