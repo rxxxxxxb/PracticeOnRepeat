@@ -1,18 +1,33 @@
-def MergeSort(numbers):
+# def MergeSort(numbers):
 
-    values = numbers
-    count = len(numbers)
-    return numbers,count
+#     values = numbers
+#     count = len(numbers)
+#     return numbers,count
 
-numbers=[1,5,76,3,5,6]
+# numbers=[1,5,76,3,5,6]
 
-a = MergeSort(numbers)
+# a = MergeSort(numbers)
 
-print(a)
+# print(a)
 
-def sort():
-    merge_sort(0, count - 1)
-    return values
+# def sort():
+#     merge_sort(0, count - 1)
+#     return values
+
+def merge_sort(low,high):
+    if low < high:
+        mid = (low + high)//2
+        
+        print("low " + str(low))
+        print("mid " + str(mid))
+        print("high "+ str(high))
+        print("\n")
+
+        merge_sort(low, mid)
+        merge_sort(mid + 1, high)
+        
+a= [1,5,4,3,2,5,6]
+merge_sort(1,10)
 
 # def merge_sort(self, low, high):
 #     if low < high:

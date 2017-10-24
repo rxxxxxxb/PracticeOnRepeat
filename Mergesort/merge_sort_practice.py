@@ -1,7 +1,8 @@
 class MergeSort():
     def __init__(self,numbers):
         self.value = numbers
-        self.count = len(numbers)
+        self.count = len(numbers) 
+
 
     def sort(self):
         self.merge_sort(0, self.count - 1)
