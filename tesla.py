@@ -1,22 +1,25 @@
 class Car():
-    def __init__(self,brand,year,type):
-        self.brand = brand
-        self.type = type
-        self.year = year
+    def __init__(self,brand,modelName,year,carType,milage):
+        self.brand=brand
+        self.modelName=modelName
+        self.year=year
+        self.carType=carType
+        self.milage=milage
 
 
-    def printBrand(self):
-        print("Car brand : " + self.brand.title())
+    def printCarinfo(self):
+        print("Car Brand : " + self.brand.title() + "\n"
+              "Car Model : " +  self.modelName.title() + "\n"
+              "Car Released in :" + str(self.year) + "\n"
+         ) 
 
-    def printYear(self):
-        print("Year : " + str(self.year) )
+    def printTechnicalinfo(self):
+        print("Car type : "   +  self.carType.title() + "\n"
+              "Car milage : " +  self.milage.title() + "\n"
+              )         
 
-    def printType(self):
-        print("type of the car : " + self.type.title())   
 
+tesla = Car('Tesla','Model S', 2016,'Electric','250 miles' )
 
-tesla = Car("Tesla", 2015,"electric") 
-
-tesla.printBrand()       
-tesla.printType()
-tesla.printYear()
+tesla.printCarinfo()    
+tesla.printTechnicalinfo()  
