@@ -1,15 +1,14 @@
 def user(first,last,**info):
-    profile = {}
+    profile= {}
+
     profile['first name']=first
     profile['last name'] =last
 
     for key,range in info.items():
         profile[key]=range
 
-    return profile
+    return profile    
 
+elon = user('Elon','Musk',location = "california",job="changing humanity")
 
-justin = user('justin','trudau',
-                location = 'Canada',job='Prime mininster')
-
-print(justin)
+print(elon)
