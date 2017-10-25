@@ -9,6 +9,6 @@ def user(first,last,**info):
 
     return profile    
 
-elon = user('Elon','Musk',location = "california",job="changing humanity")
+elon = user('Elon','Musk',location = "california",job="changing humanity",net_worth='20 billion')
 
 print(elon)
