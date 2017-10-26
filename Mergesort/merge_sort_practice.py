@@ -17,9 +17,19 @@ class MergeSort():
            self.merge(low,mid,high)
 
     def merge(self,low,mid,high):
-        b = []
+        v = []
         i = low
         j = mid + 1
 
-        while i <= mid and j <= high:
+        while i <= mid and j<= high:
             if self.values[i] <= self.values[j]:
+                v.append(self.values[i])
+                i += 1
+            else:
+                v.append(self.values[j])
+                j += 1      
+
+
+    
+    
+

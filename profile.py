@@ -1,13 +1,14 @@
-def user_profile(first,last, **user_info):
-    profile = {}
-    profile["first_name"]=first
-    profile['last_name'] =last
+def user(first,last,**info):
+    profile= {}
 
-    for key,range in user_info.items():
-        profile[key]= range
+    profile['first name']=first
+    profile['last name'] =last
 
-    return profile
+    for key,range in info.items():
+        profile[key]=range
 
-create_user = user_profile('albert','einstein',
-                           location="princeton",field='physics')
-print(create_user)
+    return profile    
+
+elon = user('Elon','Musk',location = "california",job="changing humanity",net_worth='20 billion')
+
+print(elon)
