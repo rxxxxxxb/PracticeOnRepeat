@@ -10,10 +10,9 @@ def main():
 
     ms = MergeSort(num)
 
-    output = ms.sort()
+    out = ms.sort()
 
-
-    print(output)
+    print(out)
 
 
 if __name__ == "__main__":
