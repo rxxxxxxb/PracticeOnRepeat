@@ -4,11 +4,10 @@
 
 
 animals = ['cat','dog','bird']
-# l = len(animals)
-# for index in range(l):
-#     print (index, animals[index])   
+l = len(animals)
+
+for index in range(l):
+    print (index, animals[index])   
 
 
-f=animals[0]
-
-print(f)
+#f=animals[0]
