@@ -1,17 +1,16 @@
-def user(first,middle,last,**info):
+def user(first,mid,last,**info):
     profile = {}
 
-    profile['First name'] = first
-    profile['middle name'] = middle
-    profile['Last name'] = last
+    profile['first name'] = first
+    profile['middle name'] = mid
+    profile['last name'] = last
 
-    for key,range in info.items():
-        profile[key] = range
+    for key, range in info.items():
+        profile[key]=range
 
     return profile
 
-mozart = user("wolfgang",'amadeus','mozart',location='Austria',DOB='1756')
 
-print(mozart)    
-    
-    
+beethoven = user("Ludwig","Van","Beethoven",Country = "Germany",DateofBirth="1770")    
+
+print(beethoven)
