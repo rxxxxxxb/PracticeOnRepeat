@@ -9,12 +9,11 @@ class MergeSort():
 
     def merge_sort(self,low,high):
         if low < high:
-            mid = (high+low) //2
+            mid = (low+high)//2
 
-            self.merge_sort(low,mid)
-            self.merge_sort(mid + 1,high)
+            self.merge_sort(low,high)
+            self.merge_sort(mid +1,high)
             self.merge(low,mid,high)
-            
 
     def merge(self,low,mid,high):
         a = []

@@ -1,16 +1,16 @@
-class Product():
-    def __init__(self,name,type,weight,country):
+class Customer():
+    def __init__(self,name,type,role,branch):
         self.name = name
         self.type = type
-        self.weight = weight
-        self.country = country
+        self.role = role
+        self.branch = branch
 
-    def ProductInfo(self):
-        print("Name : " + self.name.title() )
-        print("type : " + self.type.title() )
-        print("weight : " + self.weight.title() )
-        print("country : " + self.country.title() )
+    def info(self):
+        print("name : " + self.name.title())
+        print("type : " + self.type.title())
+        print("role : " + self.role.title() + "\nbranch :" + self.branch.title())
 
-coke = Product('coca-cola','Beverage',' 1.5 litre','Bangladesh')
 
-coke.ProductInfo()
+coke = Customer("Coca cola manf.","Manufacturer","manager","main")
+
+coke.info()
