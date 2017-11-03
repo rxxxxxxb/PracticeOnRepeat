@@ -6,8 +6,8 @@
 animals = ['cat','dog','bird']
 l = len(animals)
 
-for index in range(l):
-    print (index, animals[index])   
+for index ,v in enumerate(animals):
+    print(animals[index])
 
 
 #f=animals[0]

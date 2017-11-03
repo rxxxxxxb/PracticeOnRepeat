@@ -1,14 +1,14 @@
-# class Card():
-#     def __init__(self,suit,val):
-#         self.suit = suit
-#         self.value = val
+class Card(object):
+    def __init__(self,suit,val):
+        self.suit = suit
+        self.value = val
 
-#     def show(self):
-#         print ("{} of {}".format( self.suit,self.value)
+    def show(self):
+        print ("{} of {}".format( self.suit,self.value)
+   
 
 
-
-class Deck():
+class Deck(object):
     def __init__(self):
         self.card = []
         self.build()

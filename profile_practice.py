@@ -1,17 +1,14 @@
-def user(first,middle,last,**info):
+def writer(first,last,**info):
     profile = {}
 
     profile['First name'] = first
-    profile['middle name'] = middle
-    profile['Last name'] = last
+    profile['last name'] = last
 
     for key,range in info.items():
         profile[key] = range
 
     return profile
 
-mozart = user("wolfgang",'amadeus','mozart',location='Austria',DOB='1756')
+malcolm = writer('Malcolm','Gladwell',location ='Canada',book='David and Goliath',published = '2013')
 
-print(mozart)    
-    
-    
+print(malcolm)
