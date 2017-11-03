@@ -4,8 +4,8 @@ def writer(first,last,**info):
     profile['First name'] = first
     profile['last name'] = last
 
-    for key,range in info.items():
-        profile[key] = range
+    for key, range in info.items():
+        profile[key]=range
 
     return profile
 
