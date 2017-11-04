@@ -5,11 +5,11 @@ class Bottle():
         self.name= name
 
     def info(self):
-        print("Brand name " + self.brand.title() +
-              "Size " + self.size.title() +
-              "Name" + self.name.title() )    
+        print("Brand name : " + self.brand.title() +
+              "Size : " + self.size.title() +
+              "Name : " + self.name.title() )    
 
 
 Coke = Bottle("COca COla","DIet","2.5 Litre")
 
-print(Coke)
+Coke.info()
