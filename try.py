@@ -11,3 +11,5 @@ for index ,v in enumerate(animals):
 
 
 #f=animals[0]
+
+print("there are" +str(l)+ "animals")
