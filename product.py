@@ -1,16 +1,15 @@
-class Customer():
-    def __init__(self,name,type,role,branch):
-        self.name = name
-        self.type = type
-        self.role = role
-        self.branch = branch
+class Bottle():
+    def __init__(self,brand,name,size):
+        self.brand = brand
+        self.size = size
+        self.name= name
 
     def info(self):
-        print("name : " + self.name.title())
-        print("type : " + self.type.title())
-        print("role : " + self.role.title() + "\nbranch :" + self.branch.title())
+        print("Brand name " + self.brand.title() +
+              "Size " + self.size.title() +
+              "Name" + self.name.title() )    
 
 
-coke = Customer("Coca cola manf.","Manufacturer","manager","main")
+Coke = Bottle("COca COla","DIet","2.5 Litre")
 
-coke.info()
+print(Coke)
