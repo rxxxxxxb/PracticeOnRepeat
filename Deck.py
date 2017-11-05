@@ -1,12 +1,12 @@
 import random
 
-class Card(object):
+class Card(object): # card Object Super Class 
     def __init__(self,suit,val):
         self.suit = suit
         self.value = val
 
     def show(self):
-        print ("{} of {}".format( self.suit,self.value))
+        print ("{} of {}".format( self.suit,self.value)) # printing card and number
    
 
 class Deck(object):
@@ -15,14 +15,14 @@ class Deck(object):
         self.build()
 
     def build(self):
-        for s in ["Spades","Clubs","Diamonds","Hearts"]:
-            for v in range(1, 14):
-                self.cards.append(Card(s,v))
+        for suits in ["Spades","Clubs","Diamonds","Hearts"]:
+            for value in range(1, 14):
+                self.cards.append(Card(suits,value))
                 #print ("{} of {}".format(v,s))
 
     def show(self):
-        for c in self.cards:
-            c.show()
+        for v in self.cards:
+            v.show()
 
 
     def shuffle(self):
@@ -41,7 +41,7 @@ class Player():
 
     def draw(self,deck):
         self.hand.append(deck.drawCard()) 
-        return self  
+        #return self  
 
     def showHand(self):
         for card in self.hand:
@@ -64,4 +64,10 @@ for num in range(5):
     
 #lol.draw(deck).draw(deck)
 lol.showHand()
+print('--------')
+lol.discard()
+lol.discard()
+lol.discard()
 # deck.show()
+print('-------')
+lol.showHand()

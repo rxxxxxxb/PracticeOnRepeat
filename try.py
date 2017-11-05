@@ -12,4 +12,11 @@ for index ,v in enumerate(animals):
 
 #f=animals[0]
 
-print("there are" +str(l)+ "animals")
+print("there are " +str(l)+ " animals")
+
+for suits in ["Spades","Clubs","Diamonds","Hearts"]:
+    for value in range(1, 15):
+        print(suits,value)
+
+        
+
