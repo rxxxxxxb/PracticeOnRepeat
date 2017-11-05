@@ -1,14 +1,15 @@
-def writer(first,last,**info):
-    profile = {}
+class Author():
+    def __init__(self,name,book,publishedTime):
+        self.name = name
+        self.book = book
+        self.publishedTime= publishedTime
 
-    profile['First name'] = first
-    profile['last name'] = last
+    def info(self):
+        print("Writer name :" ,self.name.title()) 
+        print("Book name :" ,self.book.title())  
+        print("Published Year :" ,self.publishedTime.title())   
 
-    for key, range in info.items():
-        profile[key]=range
 
-    return profile
+greene = Author('Robert Greene','laws of power','1998')
 
-malcolm = writer('Malcolm','Gladwell',location ='Canada',book='David and Goliath',published = '2013')
-
-print(malcolm)
+greene.info()          
