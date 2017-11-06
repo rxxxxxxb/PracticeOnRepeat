@@ -8,39 +8,31 @@ class Card():
     def print(self):
         print("{} of {}".format(self.number,self.suits))  
 
-
 class Deck():
-    
     def __init__(self):
-        
         self.cards = []
         self.build()
-         
-    def build(self):
-        for suits in ['Spades','Clubs','Diamonds', "Hearts"]:
-            for value in range(1,14):
-                self.cards.append(Card(suits,value))
 
+    def build(self):
+        for suits in ['Spades','Hearts','CLubs','Diamonds']:
+            for value in range(1,14):
+                self.cards.append(card(suits,value))
+        #52 card build
 
     def show(self):
         for val in self.cards:
             val.print()
+        #show all cards 
 
     def shuffle(self):
-        for i in range (len(self.cards)-1,0,-1):
-           
-            r = random.randint(0,i)
-            self.cards[i],self.cards[r] = self.cards[r],self.cards[i]
+        for i in len(self.cards):
+            
+        #shuffle cards
+
 
     def drawCard(self):
-        return self.cards.pop()
-                         
-   
-deck = Deck()
-deck.show()
-print('\n--------\n')
-deck.shuffle()
-deck.show()
+        #pop las card
+
 
 
 # class Player():
