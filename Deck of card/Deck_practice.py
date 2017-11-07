@@ -14,9 +14,10 @@ class Deck():
         self.build()
 
     def build(self):
-        for suits in ['Spades','Hearts','CLubs','Diamonds']:
-            for value in range(1,14):
-                self.cards.append(card(suits,value))
+        for suits in ['spades','hearts','diamonds','clubs']:
+            for value in range(14):
+                self.cards.append(Card(suits,value))
+   
         #52 card build
 
     def show(self):
@@ -25,16 +26,23 @@ class Deck():
         #show all cards 
 
     def shuffle(self):
-        for i in len(self.cards):
-            
+        for i in range(len(self.cards)):
+            r = random.randint(0,i)
+            self.cards[i],self.cards[r]=self.cards[r],self.cards[i]
+               
         #shuffle cards
 
 
     def drawCard(self):
-        #pop las card
+        return self.cards.pop()
+        #pop last card
 
 
 
 # class Player():
 #      def __init__(self):
           
+deck = Deck()  
+deck.drawCard()   
+deck.shuffle()   
+deck.show()
