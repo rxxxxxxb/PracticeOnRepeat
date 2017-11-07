@@ -1,15 +1,22 @@
-class Bottle():
-    def __init__(self,brand,name,size):
+class Product():
+    def __init__(self,name,brand,type,price):
+        self.name = name
         self.brand = brand
-        self.size = size
-        self.name= name
+        self.type = type
+        self.price = price
 
-    def info(self):
-        print("Brand name : " + self.brand.title() +
-              "Size : " + self.size.title() +
-              "Name : " + self.name.title() )    
+    def productInfo(self):
+        print(" Brand name :" ,self.brand )
+        print(" Product name :" ,self.name )
+        print(" Type :" ,self.type )
+        print('Price :' + self.price)
+
+    def PrintPrice(self):
+        print('Price :' + self.price)
+        
 
 
-Coke = Bottle("COca COla","DIet","2.5 Litre")
-
-Coke.info()
+coke = Product("Coke","Coca-Cola",'Beverage',"50 bdt") 
+           
+coke.productInfo()           
+coke.PrintPrice()
