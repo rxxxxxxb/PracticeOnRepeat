@@ -45,13 +45,13 @@ class Player():
         self.hand = []
 
     def draw(self):
-        self.hand.append(deck.drawCard())
+        for card in range(5):
+            self.hand.append(deck.drawCard())
 
 
     def showHand(self):
         for i in self.hand:
             i.print()
-
 
 
 
@@ -63,5 +63,5 @@ pl1 = Player("pl1")
 
 pl1.draw()   
 #deck.shuffle()   
-deck.show()
+##deck.show()
 pl1.showHand()
