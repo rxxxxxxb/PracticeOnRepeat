@@ -26,10 +26,10 @@ class Deck(object):
 
 
     def shuffle(self):
-        for i in range(len(self.cards)-1,0,-1):
+        for length in range(len(self.cards)-1,0,-1):
             #print(i)
-            r = random.randint(0,i)
-            self.cards[i],self.cards[r] = self.cards[r],self.cards[i]  
+            r = random.randint(0,length)
+            self.cards[length],self.cards[r] = self.cards[r],self.cards[length]  
 
     def drawCard(self):
         return self.cards.pop()          

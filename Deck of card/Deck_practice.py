@@ -15,7 +15,7 @@ class Deck():
 
     def build(self):
         for suits in ['spades','hearts','diamonds','clubs']:
-            for value in range(14):
+            for value in range(1,14):
                 self.cards.append(Card(suits,value))
    
         #52 card build
@@ -26,9 +26,10 @@ class Deck():
         #show all cards 
 
     def shuffle(self):
-        for i in range(len(self.cards)):
+        l = len(self.cards)
+        for i in range(l):
             r = random.randint(0,i)
-            self.cards[i],self.cards[r]=self.cards[r],self.cards[i]
+            self.cards[i],self.cards[r] = self.cards[r],self.cards[i]
                
         #shuffle cards
 
@@ -38,11 +39,29 @@ class Deck():
         #pop last card
 
 
+class Player():
+    def __init__(self,name):
+        self.name = name
+        self.hand = []
 
-# class Player():
-#      def __init__(self):
-          
+    def draw(self):
+        self.hand.append(deck.drawCard())
+
+
+    def showHand(self):
+        for i in self.hand:
+            i.print()
+
+
+
+
+
 deck = Deck()  
-deck.drawCard()   
-deck.shuffle()   
+deck.shuffle()
+
+pl1 = Player("pl1")
+
+pl1.draw()   
+#deck.shuffle()   
 deck.show()
+pl1.showHand()
