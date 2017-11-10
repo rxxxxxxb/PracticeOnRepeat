@@ -14,9 +14,12 @@ for index ,v in enumerate(animals):
 
 print("there are " +str(l)+ " animals")
 
-for suits in ["Spades","Clubs","Diamonds","Hearts"]:
-    for value in range(1, 15):
-        print(suits,value)
+# for suits in ["Spades","Clubs","Diamonds","Hearts"]:
+#     for value in range(1, 15):
+#         print(suits,value)
 
         
-
+for length in range((100)-0,1,-2): #is Even
+    print(length)
+            # r = random.randint(0,length)
+            # self.cards[length],self.cards[r] = self.cards[r],self.cards[length]  

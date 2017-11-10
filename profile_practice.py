@@ -1,14 +1,14 @@
-def user(first,last,**info):
+def artist(first,last,**info):
     profile = {}
 
-    profile['first name'] = first
-    profile['last name'] = last
+    profile['First name']= first
+    profile['last name' ]= last
 
     for key,range in info.items():
-        profile[key] = range
+        profile [key] = range
 
     return profile
 
-mozart = user("Wolagang amadeus \n","Mozart\n",place = "Austria/n",Birthyear = "1756/n")    
+mozart = artist("Amadeus","Mozart",location = "Austria",Birth = 1745)
 
 print(mozart)
