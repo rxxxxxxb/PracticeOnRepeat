@@ -40,18 +40,20 @@ class Deck:
 
 class Player:
     def __init__(self,name):
-        self.name = name
+        self.name= name
         self.hand = []
 
     def draw(self):
-        self.hand.append(deck.drawCard())  
+        self.hand.append(deck.drawCard())
+
 
     def showHand(self):
-        for i in self.hand:
-            i.show() 
+        for card in self.hand:
+            card.show()
 
     def discard(self):
-        return self.hand.pop()   
+        return self.hand.pop()        
+
 
 
 # clubs = Card("clubs","8")
