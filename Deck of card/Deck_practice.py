@@ -42,17 +42,14 @@ class Player:
     def __init__(self,name):
         self.name= name
         self.hand = []
-
+        
+    
     def draw(self):
         self.hand.append(deck.drawCard())
 
-
     def showHand(self):
-        for card in self.hand:
-            card.show()
-
-    def discard(self):
-        return self.hand.pop()        
+        for v in self.hand:
+            v.show()    
 
 
 
@@ -72,6 +69,6 @@ cartman = Player("Cartman")
 cartman.draw()
 cartman.draw()
 cartman.showHand()
-cartman.discard()
+#cartman.discard()
 print("-----")
 cartman.showHand()
