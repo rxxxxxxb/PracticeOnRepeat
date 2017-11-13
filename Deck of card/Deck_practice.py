@@ -14,11 +14,13 @@ class Deck:
         self.cards = []
         self.build()
 
-
     def build(self):
-        for card in  ['Clubs',"Spades","Hearts",'Diamonds']:
-            for val in range(1,14):
-                self.cards.append(Card(card,val))
+        for suits in ['hearts','clubs','spades','diamonds']:
+            for v in range(1,14):
+                self.cards.append(Card(suits,v))
+
+
+  
 
 
     def shuffle(self):
