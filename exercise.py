@@ -2,27 +2,26 @@ class Song:
     def __init__(self,album):
         self.album = album
         self.index = 0
-        self.start()
+        self.jump()
 
-    def start(self):
-        self.lyrics = self.album[self.index]     
+    def jump(self):
+        self.lyrics = self.album[self.index]    
 
-    def next(self):
-        self.index = self.index + 1     
-        self.start()
+    def forward(self):
+        self.index = self.index + 1
+        self.jump()
 
     def play(self):
-        for lyric in self.lyrics:
-            print(lyric)
+        for l in self.lyrics:
+            print(l)
 
-song1 = ["akhakhfa"]
-
-song2 = ["jkdbkqelwnle"]
+song1 =["ajklshfoaf"]            
+song2 = ["dglknhgn"]
 
 album = [song1,song2]
 
-disk = Song(album)
+album = Song(album)
 
-disk.play()
-disk.next()
-disk.play()
+album.play()
+album.forward()
+album.play()
