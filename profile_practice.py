@@ -1,14 +1,18 @@
-def artist(first,last,**info):
-    profile = {}
+def profile(first,last,**info):
+    user = {}
 
-    profile['First name']= first
-    profile['last name' ]= last
+    user['First name'] = first
+    user['last name'] = last
 
     for key,range in info.items():
-        profile [key] = range
+        user[key] = range
+        print(key,range)
+    
 
-    return profile
+    return user
 
-mozart = artist("Amadeus","Mozart",location = "Austria",Birth = 1745)
+rkib = profile("rkib","rkb",DOB = '1992',UNI = "AIUB")
 
-print(mozart)
+print(rkib)    
+
+
