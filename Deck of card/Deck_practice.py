@@ -15,9 +15,9 @@ class Deck:
         self.build()
 
     def build(self):
-        for suits in ['hearts','clubs','spades','diamonds']:
-            for v in range(1,14):
-                self.cards.append(Card(suits,v))
+        for suits in ["Clubs","Hearts","Diamonds","Spades"]:
+            for val in range(1,14):
+                self.cards.append(Card(suits,val))
 
 
   
