@@ -1,16 +1,19 @@
 class Product:
-    def __init__(self,name,year,type):
-        self.name=name
-        self.year=year
-        self.type = type
+    def __init__(self,Brand,Line,nam):
+        self.Brand = Brand
+        self.Line = Line
+        self.name = nam
+        # self.price = price
 
     def info(self):
-        print("Name : " + self.name +
-              " year : " , self.year)
+        print("Brand : " + self.Brand)    
+        print("Line : " + self.Line)
+        print("name : " + self.name)
 
-        print("Type : " + self.type )          
+        print("Price : " + self.price)
 
+Coke = Product("COca Cola","Beverage","DIet Coke")
 
-coke= Product("coca-cola",2017,'beverage') 
+Coke.price = "220 bdt"
 
-coke.info()       
+Coke.info()
