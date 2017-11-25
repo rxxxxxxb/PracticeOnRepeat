@@ -1,6 +1,6 @@
-things = "harambe he was not just a gorilla"
+things = "HARAMBE, he was not just a gorilla."
 
-more = "Rest in peace sweet prince"
+more = "Rest in peace sweet Prince."
 
 thingsArray = things.split(' ')
 moreArray = more.split(' ')
@@ -20,7 +20,8 @@ while len(thingsArray) != 12:
 
 
 print(thingsArray)
-
+for value in enumerate(thingsArray,1):
+    print(value)
 #print(thingsArray.pop())
 
 print(' '.join(thingsArray))
