@@ -44,4 +44,17 @@ class LinkedStack:
         return answer
 
 
-L = _Node.push(5)
+
+link = LinkedStack()
+
+for val in range(5):
+    val = val + 1 
+    print(val)
+    link.push(val)
+
+b = link.top()
+c = link.pop()
+
+
+print(b,c)
+print(link.top())
