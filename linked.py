@@ -33,9 +33,8 @@ class LinkedStack:
         return self._head._element  # top of stack is at head of list
 
     def pop(self):
-    #Remove and return the element from the top of the stack(i.e., LIFO).
-
-#Raise Empty exception if the stack is empty.
+    #Remove and return the element from the top of the stack(i.e., LIFO)
+     #Raise Empty exception if the stack is empty.
         if self.isempty():
             raise Exception('Stack is empty')
         answer = self._head._element
@@ -54,7 +53,9 @@ for val in range(5):
 
 b = link.top()
 c = link.pop()
-
+d = link.isempty()
+e = link.pop()
 
 print(b,c)
 print(link.top())
+print(d, e)
