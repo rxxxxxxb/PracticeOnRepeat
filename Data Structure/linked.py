@@ -1,45 +1,45 @@
 class LinkedStack:
 
     #-------------------------- nested Node class --------------------------
-    class _Node:
-        __slots__ = '_element', '_next'  # streamline memory usage
+    class Node:
+        slots = 'element', 'next'  # streamline memory usage
         
         def __init__(self, element, next):
             # initialize node’s fields
-            self._element = element  # reference to user’s element
-            self._next = next  # reference to next node
+            self.element = element  # reference to user’s element
+            self.next = next  # reference to next node
 
     def __init__(self):
 #”””Create an empty stack.”””
-        self._head = None  # reference to the head node
-        self._size = 0  # number of stack elements
+        self.head = None  # reference to the head node
+        self.size = 0  # number of stack elements
 
-    def __len__(self):
+    def len(self):
 #Return the number of elements in the stack.”””
-        return self._size
+        return self.size
 
     def isempty(self):
 #Return True if the stack is empty.”””
-        return self._size == 0
+        return self.size == 0
 
     def push(self, e):
 #Add element e to the top of the stack.”””
-        self._head = self._Node(e, self._head)  # create and link a new node
-        self._size += 1
+        self.head = self.Node(e, self.head)  # create and link a new node
+        self.size += 1
 
     def top(self):#Return(but do not remove) the element at the top of the stack.
         if self.isempty():
             raise Exception('Stack is empty')
-        return self._head._element  # top of stack is at head of list
+        return self.head.element  # top of stack is at head of list
 
     def pop(self):
     #Remove and return the element from the top of the stack(i.e., LIFO)
      #Raise Empty exception if the stack is empty.
         if self.isempty():
             raise Exception('Stack is empty')
-        answer = self._head._element
-        self._head = self._head._next  # bypass the former top node
-        self._size =- 1
+        answer = self.head.element
+        self.head = self.head.next  # bypass the former top node
+        self.size =- 1
         return answer
 
 
@@ -52,11 +52,12 @@ for val in range(5):
     print(val)
     link.push(val)
 
-b = link.top()
-c = link.pop()
-d = link.isempty()
-e = link.pop()
+top = link.top()
+pop = link.pop()
+checkEmpty  = link.isempty()
+popAgain = link.pop()
 
-print(b,c)
+print(top,pop)
 print(link.top())
-print(d, e)
+print(checkEmpty)
+print(popAgain)
