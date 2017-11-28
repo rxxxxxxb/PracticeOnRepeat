@@ -1,18 +1,15 @@
-def profile(first,last,**info):
-    user = {}
+def user(first,last,**info):
+    profile = {}
 
-    user['First name'] = first
-    user['last name'] = last
+    profile["FIrst name"] = first
+    profile["Last name "] = last
 
     for key,range in info.items():
-        user[key] = range
-        print(key,range)
-    
+        profile[key] = range
 
-    return user
+    return profile
 
-rkib = profile("rkib","rkb",DOB = '1992',UNI = "AIUB")
+dawking = user("Richard","Dawking",Book ="God Delusion") 
 
-print(rkib)    
-
+print(dawking)   
 
