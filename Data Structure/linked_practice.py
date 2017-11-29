@@ -3,11 +3,7 @@ class Node:
         self.element = element
         self.next = next
 
-
-
 class LinkedStack:
-
-   
     def __init__(self):
         self.head = None
         self.size = 0
