@@ -28,23 +28,24 @@ class Author:
         
         for book in self.books:
             print("Book name : " ,book)
-        
-        
-                    
 
 
-book = ['Mastery','Laws of power','art of Seduction']
+bookG = ['Mastery','Laws of power','art of Seduction']
 
-greene = Author(book)
+greene = Author(bookG)
 greene.name = 'Robert Greene'
 greene.publishedTime ='1998' 
 
+greene.info()
+greene.show()
 # for b in book:
 #     greene.addBook(b)
+print("\n")
+bookM = ['Outliers','Blink','Tipping point']
 
-# greene.addBook('book1')
-# greene.addBook('book2')
-
-greene.info()
-
-greene.show()          
+malcolm = Author(bookM)
+malcolm.name = "Malcolm Gladwell"
+malcolm.publishedTime = '2010'
+malcolm.info()
+malcolm.show()
+   

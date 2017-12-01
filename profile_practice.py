@@ -10,6 +10,7 @@ def user(first,last,**info):
     return profile
 
 dawking = user("Richard","Dawking",Book ="God Delusion") 
+harris = user("Sam","Harris",Book = "Waking Up")
 
 print(dawking)   
-
+print(harris)

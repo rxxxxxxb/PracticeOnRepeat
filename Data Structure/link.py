@@ -1,15 +1,15 @@
+import random
 
 class Stack:
     def __init__(self):
-        self.head = None
+        self.head = 0
         self.size = 0
 
     class Node:
-        def __init__(self, element, next):
-            self.element = element
-            self.next = next
-
-
+        def __init__(self,element,next):
+            self.element = element    
+            self.next = next            
+  
     def push(self,e):
         self.head = self.Node(e,self.head)
         self.size += 1
@@ -22,10 +22,10 @@ class Stack:
 
 stack = Stack()         
 
-stack.push(500)
-stack.push(500)
-stack.push(500)
-stack.push(500)
+for r in  range(100):
+    rand = random.randint(0,r)
+    stack.push(rand)
+#stack.push(500)
 
 len = stack.length()
 top = stack.top()
