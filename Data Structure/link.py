@@ -1,12 +1,14 @@
-class LinkedList:
+
+class Stack:
     def __init__(self):
         self.head = None
         self.size = 0
 
     class Node:
-        def __init__(self,element,next):
+        def __init__(self, element, next):
             self.element = element
             self.next = next
+
 
     def push(self,e):
         self.head = self.Node(e,self.head)
@@ -15,18 +17,17 @@ class LinkedList:
     def top(self):
         return self.head.element
 
-    def pop(self):
-        pop = self.head.element
-        self.head = self.head.next
-        return pop
+    def length(self):
+        return self.size
 
-link = LinkedList()
+stack = Stack()         
 
-link.push(1000)
-link.push(500)
-top = link.top()
+stack.push(500)
+stack.push(500)
+stack.push(500)
+stack.push(500)
+
+len = stack.length()
+top = stack.top()
 print(top)
-
-link.pop()
-top = link.top()
-print(top)
+print(len)
