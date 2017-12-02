@@ -10,6 +10,9 @@ class Author:
       
         print("Published Year :" ,self.publishedTime.title())   
 
+
+
+
     # def booklist(self):
     #     book = ['b1','b2','b3']
     #     for b in ['b1','b2','b3']:
@@ -25,9 +28,12 @@ class Author:
     #     print(self.books)
 
     def show(self):
-        
-        for book in self.books:
-            print("Book name : " ,book)
+        print(len(self.books))
+        self.books.pop()
+
+        print(len(self.books))
+        # for book in self.books:
+        #     print("Book name : " ,book)
 
 
 bookG = ['Mastery','Laws of power','art of Seduction']

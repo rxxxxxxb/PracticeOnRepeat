@@ -13,6 +13,9 @@ class Cat(Animal):
         ## Cat has-a name
         self.name = name
 
+    def name(self):
+        print("Name : ",self.name)
+
 ## Person is-a object
 class Person(object):
     def __init__(self, name):
@@ -48,23 +51,27 @@ rover = Dog("Rover")
 ## satan is-a Cat
 satan = Cat("Satan")
 
+satan.name()
+
 ## mary is-a Person
 mary = Person("Mary")
 
+
+
 ## mary's pet is satan
-mary.pet = satan
+# mary.pet = satan
 
-## frank is-a Employee, his salary is 120000
-frank = Employee("Frank", 120000)
-print(frank)
-## frank's pet is rover
-frank.pet = rover
+# ## frank is-a Employee, his salary is 120000
+# frank = Employee("Frank", 120000)
+# print(frank)
+# ## frank's pet is rover
+# frank.pet = rover
 
-## flipper is-a Fish
-flipper = Fish()
+# ## flipper is-a Fish
+# flipper = Fish()
 
-## crouse is-a Salmon
-crouse = Salmon()
+# ## crouse is-a Salmon
+# crouse = Salmon()
 
-## harry is-a Halibut
-harry = Halibut()
+# ## harry is-a Halibut
+# harry = Halibut()
