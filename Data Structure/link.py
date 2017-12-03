@@ -42,9 +42,6 @@ for r in  range(10):
 l = stack.length()
 arry = []
 
-
-
-
 for ran in range(l):# converting linked list to array
     temp = stack.pop()
     print("arr : " ,temp)
