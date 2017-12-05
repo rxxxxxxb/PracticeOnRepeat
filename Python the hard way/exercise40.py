@@ -25,8 +25,6 @@ class Song:
             print(line) 
 
 song1 = ["Happy Birthday to you",
-         "I dont Wanna get sued",
-         "So I`ll stop right there",
          "------"]
 
 
