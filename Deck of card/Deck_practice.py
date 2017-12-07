@@ -1,4 +1,3 @@
-
 import random
 
 class Card():
@@ -19,34 +18,28 @@ class Deck:
             for val in range(1,14):
                 self.cards.append(Card(suits,val))
 
-
-  
-
-
     def shuffle(self):
         TotalCard = len(self.cards)
         for length in range(TotalCard):
             rand = random.randint(0,length)
             self.cards[length],self.cards[rand] = self.cards[rand],self.cards[length]
 
-
     def show(self):
         for v in self.cards:
             v.show()            
 
-
     def drawCard(self):
         return self.cards.pop()    
-
 
 class Player:
     def __init__(self,name):
         self.name= name
         self.hand = []
-        
+        self.size = 0
     
     def draw(self):
         self.hand.append(deck.drawCard())
+        self.size += 1
 
     def showHand(self):
         for v in self.hand:
@@ -62,7 +55,8 @@ class Player:
         if not self.hand:
             print("empty")    
 
-
+    def lengthOfHand(self):
+        print("Number of card In hand :", self.size)         
 
 # clubs = Card("clubs","8")
 
@@ -76,11 +70,12 @@ deck.shuffle()
 
 cartman = Player("Cartman")
 
+for l in range(10):
+    cartman.draw()
 
-cartman.draw()
-#cartman.draw()
 cartman.showHand()
-cartman.discard()
+#cartman.discard()
 print("-----")
-cartman.showEmptyHand()
+#cartman.showEmptyHand()
 cartman.showHand()
+cartman.lengthOfHand()
