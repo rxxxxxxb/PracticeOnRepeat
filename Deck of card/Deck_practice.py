@@ -59,7 +59,7 @@ class Player:
             print("empty")    
 
     def lengthOfHand(self):
-        print("Number of card In hand :", self.size)         
+        print("Number of card in hand :", self.size)         
 
 # clubs = Card("clubs","8")
 
@@ -72,6 +72,8 @@ deck.shuffle()
 # deck.show()
 
 cartman = Player("Cartman")
+
+
 
 # for l in range(10):
 cartman.draw()

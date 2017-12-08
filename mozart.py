@@ -8,7 +8,7 @@ def Artist(first,mid,last,**info):
     for key,range in info.items():
         profile[key] = range
 
-    return profile
+    return range
 
 mozart = Artist('Wolfgang','Amadeus','Mozart',
                 Location = 'Austria' , BirthYear = 1745)    
