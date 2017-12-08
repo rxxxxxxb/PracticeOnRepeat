@@ -38,8 +38,11 @@ class Player:
         self.size = 0
     
     def draw(self):
-        self.hand.append(deck.drawCard())
-        self.size += 1
+        callBridge = range(5)
+        for ra in callBridge:
+                
+            self.hand.append(deck.drawCard())
+            self.size += 1
 
     def showHand(self):
         for v in self.hand:
@@ -70,12 +73,12 @@ deck.shuffle()
 
 cartman = Player("Cartman")
 
-for l in range(10):
-    cartman.draw()
+# for l in range(10):
+cartman.draw()
 
 cartman.showHand()
 #cartman.discard()
 print("-----")
 #cartman.showEmptyHand()
-cartman.showHand()
+# cartman.showHand()
 cartman.lengthOfHand()
