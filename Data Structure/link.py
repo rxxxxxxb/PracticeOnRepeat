@@ -42,7 +42,21 @@ class Stack:
             if count == self.size:
                 print("DOne")
                 break
-            
+
+    def COnvertToArray(self):
+        self.arry = []
+        for ran in range(l):  # converting linked list to array
+            temp = self.pop()
+            self.arry.append(temp)
+            print("Index :", len(self.arry), "and Value : ", temp)
+        return self.arry    
+
+    def PrintArray(self):
+        for r, v in enumerate(self.arry,1):
+            print(r,v)
+
+        # print(self.arry)
+
 
 
 stack = Stack()         
@@ -55,15 +69,20 @@ for r in  range(50):
 #stack.pop()
 l = stack.length()
 print("length",l)
+
+stack.COnvertToArray()
+stack.PrintArray()
+
 # arry = []
 
 # for ran in range(l):# converting linked list to array
 #     temp = stack.pop()
-#     print("arr : " ,temp)
 #     arry.append(temp)
-#     print("size " , len(arry))
+#     print("Index :" , len(arry), "and Value : ",temp)
+# #    print("arr : " ,temp)
 
-stack.printList()
+# print(arry)
+#stack.printList()
 
 # for  r, v  in enumerate(arry):
 #     print(r,v)
