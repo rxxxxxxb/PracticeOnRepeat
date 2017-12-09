@@ -1,6 +1,6 @@
 import random
 
-class Stack:
+class LinkedList:
     def __init__(self):
         self.head = 0
         self.size = 0
@@ -48,44 +48,69 @@ class Stack:
         for ran in range(l):  # converting linked list to array
             temp = self.pop()
             self.arry.append(temp)
-            print("Index :", len(self.arry), "and Value : ", temp)
+            #print("Index :", len(self.arry), "and Value : ", temp)
         return self.arry    
 
     def PrintArray(self):
         for r, v in enumerate(self.arry,1):
             print(r,v)
 
-        # print(self.arry)
+    def FindData(self,Data):
+        data = Data
+        current = self.head
+        print("Search : " ,Data)
+       
+        print(current.element)
+        if current.element == 2:
+            print("Data :", Data ," = element :",current.element)
+       
+        current = current.next
+        print(current.element)
+        if current.element == data:
+            print("Data :", Data, " = element :", current.element)
+
+        current = current.next
+        print(current.element)
+        if current.element == Data:
+            print("Data :", Data, " = element :", current.element)
+
+        
+        
+        #
+        # while current is not None:
+        #     print(current.element)
+        #     if current.element == Data:
+        #         print("Data :", Data ," = element :",current.element)
+                
+        #         current = current.next
+        # return None        
+
+        
 
 
+stack = LinkedList()         
 
-stack = Stack()         
+# for r in  range(10):
+#     rand = random.randint(0,1)
+#     stack.push(rand)
 
-for r in  range(50):
-    rand = random.randint(0,100)
-    stack.push(rand)
-#stack.push(500)
- 
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
 #stack.pop()
+
 l = stack.length()
 print("length",l)
 
-stack.COnvertToArray()
-stack.PrintArray()
+stack.FindData("2")
 
-# arry = []
 
-# for ran in range(l):# converting linked list to array
-#     temp = stack.pop()
-#     arry.append(temp)
-#     print("Index :" , len(arry), "and Value : ",temp)
-# #    print("arr : " ,temp)
+# stack.COnvertToArray()
+# stack.PrintArray()
 
-# print(arry)
 #stack.printList()
 
-# for  r, v  in enumerate(arry):
-#     print(r,v)
 
 
 #     #stack.pop()
