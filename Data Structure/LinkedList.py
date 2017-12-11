@@ -95,6 +95,7 @@ class LinkedList(object):
         while curr_node is not None:
             data.append(curr_node.data)
             curr_node = curr_node.next
+        return data    
 
 ll = LinkedList()
 
@@ -104,3 +105,15 @@ ll.insert_to_front(5)
 ll.insert_to_front(4)
 ll.insert_to_front(450)
 ll.print_list()
+a = ll.get_all_data()
+print(a)
+f = ll.delete(45)
+a = ll.get_all_data()
+print(a)
+ll.append(500)
+ll.append(501)
+ll.append(540)
+li = ll.get_all_data()
+print(li)
+len = ll.__len__()
+print(len)
