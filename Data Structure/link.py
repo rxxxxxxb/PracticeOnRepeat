@@ -56,37 +56,21 @@ class LinkedList:
             print(r,v)
 
     def FindData(self,Data):
-        data = Data
         current = self.head
         print("Search : " ,Data)
-       
-        print(current.element)
-        if current.element == 2:
-            print("Data :", Data ," = element :",current.element)
-       
-        current = current.next
-        print(current.element)
-        if current.element == data:
-            print("Data :", Data, " = element :", current.element)
-
-        current = current.next
-        print(current.element)
-        if current.element == Data:
-            print("Data :", Data, " = element :", current.element)
-
         
+        while current is not None:
+            print(current.element)
+            if current.element == Data:
+                print("Data :", Data ," = element :",current.element)               
+                return 0
+            current = current.next
+        return ("Not found")
         
-        #
-        # while current is not None:
-        #     print(current.element)
-        #     if current.element == Data:
-        #         print("Data :", Data ," = element :",current.element)
-                
-        #         current = current.next
-        # return None        
-
+            
+                        
         
-
+    
 
 stack = LinkedList()         
 
@@ -98,12 +82,13 @@ stack.push(1)
 stack.push(2)
 stack.push(3)
 
+stack.push(4)
 #stack.pop()
 
 l = stack.length()
 print("length",l)
 
-stack.FindData("2")
+stack.FindData(2)
 
 
 # stack.COnvertToArray()
