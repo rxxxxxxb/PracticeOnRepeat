@@ -95,4 +95,12 @@ class LinkedList(object):
         while curr_node is not None:
             data.append(curr_node.data)
             curr_node = curr_node.next
-return data
+
+ll = LinkedList()
+
+ll.insert_to_front(45)
+
+ll.insert_to_front(5)
+ll.insert_to_front(4)
+ll.insert_to_front(450)
+ll.print_list()

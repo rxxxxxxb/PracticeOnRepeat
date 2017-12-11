@@ -6,7 +6,7 @@ class LinkedList:
         self.size = 0
 
     class Node:
-        def __init__(self,element,next):
+        def __init__(self,element,next=None ):
             self.element = element    
             self.next = next            
   
@@ -68,10 +68,6 @@ class LinkedList:
         return ("Not found")
         
             
-                        
-        
-    
-
 stack = LinkedList()         
 
 # for r in  range(10):
@@ -88,7 +84,7 @@ stack.push(4)
 l = stack.length()
 print("length",l)
 
-stack.FindData(2)
+stack.FindData(9)
 
 
 # stack.COnvertToArray()
@@ -96,12 +92,3 @@ stack.FindData(2)
 
 #stack.printList()
 
-
-
-#     #stack.pop()
-#     print(r,v)
-#     len = stack.length()
-#     top = stack.top()
-#     print(top)
-#     print(len)
-#     stack.pop()
