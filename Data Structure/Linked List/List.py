@@ -1,3 +1,5 @@
+import random
+
 class Node:
     def __init__(self,data,next):
         self.next = next
@@ -16,12 +18,13 @@ class LinkedList:
         return node 
 
     def size(self):
-        current = self.head
+        currentNode = self.head
         counter = 0
-        while current is not None:
+        while currentNode is not None:
             counter += 1
-            current = current.next
-        print(counter)      
+            currentNode = currentNode.next
+        print(counter)    
+   
 
     def printAll(self):
         data = []      
@@ -38,9 +41,10 @@ class LinkedList:
 
 link = LinkedList()
 
-link.insert(500)
-link.insert(590)
-link.insert(40)    
+for ran in range(50):
+    rand = random.randint(0,50)
+    link.insert(rand) 
+
 
 link.size()
 link.printAll()
