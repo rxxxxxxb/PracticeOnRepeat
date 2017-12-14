@@ -14,6 +14,8 @@ class LinkedList:
 
     def insert(self,data):
         node = Node(data, self.head)
+        p = node.__str__()
+        print(p)
         self.head = node
         return node 
 
@@ -41,10 +43,11 @@ class LinkedList:
 
 link = LinkedList()
 
-for ran in range(50):
+for ran in range(10):
     rand = random.randint(0,50)
     link.insert(rand) 
 
-
-link.size()
+l = link.size()
+print("SIze of list ",l)
 link.printAll()
+
