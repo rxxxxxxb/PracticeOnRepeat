@@ -38,15 +38,21 @@ class LinkedList:
             print(current.element)
             current = current.next
             count += 1
-            print(count)
+            #print("Index",count)
             if count == self.size:
                 print("DOne")
                 break
 
     def COnvertToArray(self):
+        self.popToArray()
+        print(self.arry)
+        self.PrintArray()        
+
+    def popToArray(self):
         self.arry = []
         for ran in range(l):  # converting linked list to array
             temp = self.pop()
+            print("temp",temp)
             self.arry.append(temp)
             #print("Index :", len(self.arry), "and Value : ", temp)
         return self.arry    
@@ -57,16 +63,19 @@ class LinkedList:
 
     def FindData(self,Data):
         current = self.head
-        print("Search : " ,Data)
-        
+        print("Search For : " ,Data)
+        count = 0
         while current is not None:
             print(current.element)
             if current.element == Data:
                 print("Data :", Data ," = element :",current.element)               
-                return 0
+                return 
+            count += 1
             current = current.next
-        return ("Not found")
-        
+            if count == self.size:
+                print("SEarch item ",Data , "Not Found")
+                break
+                
             
 stack = LinkedList()         
 
@@ -77,17 +86,21 @@ stack = LinkedList()
 stack.push(1)
 stack.push(2)
 stack.push(3)
-
+stack.push(8)
+stack.push(90)
 stack.push(4)
 #stack.pop()
 
 l = stack.length()
 print("length",l)
 
-stack.FindData(9)
+stack.FindData(900)
+print("--------------")
+stack.printList()
 
 
-# stack.COnvertToArray()
+print("--------------")
+stack.COnvertToArray()
 # stack.PrintArray()
 
 #stack.printList()
