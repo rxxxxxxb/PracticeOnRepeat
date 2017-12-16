@@ -1,19 +1,16 @@
-def Artist(first,mid,last,**info):
+def Artist(first,last,**info):
     profile = {}
 
-    profile['First name']  = first
-    profile['Middle name'] = mid
-    profile['Last name']   = last
-    
+    profile["First Name"] = first
+    profile["Last Name"] = last
+
     for key,range in info.items():
         profile[key] = range
 
-    return range
+    return profile
 
-mozart = Artist('Wolfgang','Amadeus','Mozart',
-                Location = 'Austria' , BirthYear = 1745)    
+mozart = Artist("Amadeus","Mozart",Piece = " Lacrimosa") 
+beethooven = Artist("Luidwig","Beethoven",Piece = "Moonlight SOnata")
 
-
-#create composed music function
-
-print(mozart)
+print(mozart)   
+print(beethooven)
