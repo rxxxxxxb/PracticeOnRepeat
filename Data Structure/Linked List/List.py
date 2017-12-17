@@ -43,11 +43,11 @@ class LinkedList:
 
 link = LinkedList()
 
-for ran in range(10):
+for ran in range(1):
     rand = random.randint(0,50)
     link.insert(rand) 
 
-l = link.size()
-print("SIze of list ",l)
-link.printAll()
+link.size()
+#print("SIze of list ",l)
+#link.printAll()
 
