@@ -1,27 +1,29 @@
 class Node:
-    def __init__(self,element,next):
-        self.element = element
+    def __init__(self,data,string,next):
+        self.data = data
+        self.string = string
+
         self.next = next
 
-class LinkedStack:
-    def __init__(self):
-        self.head = None
-        self.size = 0
+    def str(self):
+        return self.data,self.string
 
-    def push(self,e):    
-        self.head = Node(e,self.head)
-        self.size += 1
 
-    def top(self):
-        return self.head.element
 
-    def pop(self):
-        pop = self.head.element
-        self.head = self.head.next
-        self.size =-1
-        return pop
+class LinkedList:
+    def __init__(self,head = None):
+        self.head = head
 
-link = LinkedStack()    
+    def insert(self,data,string):
+        node = Node(data,string,self.head)
+        d = node.str()
+        print(d)
 
-link.push(10)
-print(link.top())
+        self.head = node
+
+ll = LinkedList()
+
+ll.insert(100,"One H")
+ll.insert(200,"Two H")
+ll.insert(300,"Three H")
+                
