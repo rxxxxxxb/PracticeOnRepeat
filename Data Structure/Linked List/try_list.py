@@ -6,20 +6,18 @@ class Node:
     def data(self): 
         return self.data   
 
-head = 0
-head = Node(5,head)
-print("h1",head.data)
+class Linked:
+    def __init__(self,head = None):
+        self.head = head
 
-h2 = Node(20,head)
-print("h2", h2.data)
+    def push(self,data):
+        node = Node(data,self.head)
+        self.head = node
+        print(node)
+        print(data)
+        
 
-h3 = Node(200, h2)
-print("h3", h2.data)
 
-h4 = Node(2000, h2)
-print("h4", head.data)
+link = Linked()
 
-print(head.data)
-print(h2.data)
-print(h3.data)
-print(h4.data)
+link.push(10)
