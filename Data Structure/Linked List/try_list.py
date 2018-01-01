@@ -1,23 +1,34 @@
 class Node:
     def __init__(self,data,next):
-        self.next = next
         self.data = data
-    
-    def data(self): 
-        return self.data   
+        self.next = next
 
-class Linked:
+    def _getData(self):
+        return self.data
+
+class LinkedList:
     def __init__(self,head = None):
-        self.head = head
+        self.head = None
 
-    def push(self,data):
-        node = Node(data,self.head)
+    def input(self,data):
+        node = Node(data,self.head)            
+
+
         self.head = node
-        print(node)
-        print(data)
-        
 
+    def showLL(self):
+        size = 0
+        CurrentNode = self.head
+        while CurrentNode is not None:
+            print("all, ",CurrentNode.data)  
+            CurrentNode = CurrentNode.next  
+            size +=1
+        print(size)    
 
-link = Linked()
+ll = LinkedList()        
 
-link.push(10)
+ll.input(50)
+ll.input(500)
+ll.input(50000)
+
+ll.showLL()
