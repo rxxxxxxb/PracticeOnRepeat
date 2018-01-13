@@ -1,10 +1,30 @@
-print("lol %s " % 'hahah')
+class Node:
+    def __init__(self,data,next):
+        self.data = data
+        self.next = next
 
-a = 'A'
-b = 'B'
-c = 'C'
-d = 'Dddd'
+class List:
+    def __init__(self,head = None):
+        self.head = head
 
-print("k"* 10)
 
-print(a+b+c+d,end='' )
+    def input(self,data):
+        node = Node(data,self.head)
+        self.head = node
+
+
+    def PrintAll(self):
+        current = self.head
+        
+        while current is not None:
+            print(current.data)
+            current = current.next
+
+
+ll = List()
+
+ll.input(40)
+ll.input(400)
+ll.input(4000)
+
+ll.PrintAll()
