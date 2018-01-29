@@ -1,34 +1,34 @@
 class Node:
-    def __init__(self,value,next):
-        self.value = value
+    def __init__(self,data,next):
+        self.data = data
         self.next = next
 
-    def _value(self):
-        return self.value    
-
 class LinkedList:
-    def __init__(self):
-        self.head = None    
+    def __init__(self,head = None):
+        self.head = head
 
-    def insert(self,data):
+    def input(self,data):
         node = Node(data,self.head)
-
         self.head = node
 
-    def printAll(self):
-        CurrentNode = self.head
+    def PrintAll(self):
+        currentNode = self.head
         size = 0
-        while CurrentNode is not None:
-            print('node',CurrentNode.value)
-            CurrentNode = CurrentNode.next
-            size += 1 
-        print(size)    
 
+        while currentNode is not None:
+            p = currentNode.data
+            print(p)
+            size += 1 
+            currentNode = currentNode.next
+
+        print("Size of the list :",size)    
 
 ll = LinkedList()
+ 
+ll.input(55)
+ll.input(521)
+ll.input(5121)
+ll.input(51)
+ll.input(100)
 
-ll.insert(10)            
-ll.insert(1)
-ll.insert(10000)
-
-ll.printAll()
+ll.PrintAll()
